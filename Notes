@@ -93,6 +93,7 @@ string greeting = "Hello";
 cout << greeting;
 
 @ Operators
+- Arithmetic
 Operator	Name	            Description	Example	Try it
 +	        Addition	        Adds together two values	x + y	
 -	        Subtraction	      Subtracts one value from another	x - y	
@@ -101,3 +102,106 @@ Operator	Name	            Description	Example	Try it
 %	        Modulus	          Returns the division remainder	x % y	
 ++	      Increment	        Increases the value of a variable by 1	++x	
 --	      Decrement	        Decreases the value of a variable by 1	--x
+
+- Assignment
+Operator	Example	Same As	Try it
+=	x = 5	x = 5	
++=	x += 3	x = x + 3	
+-=	x -= 3	x = x - 3	
+*=	x *= 3	x = x * 3	
+/=	x /= 3	x = x / 3	
+%=	x %= 3	x = x % 3	
+&=	x &= 3	x = x & 3	
+|=	x |= 3	x = x | 3	
+^=	x ^= 3	x = x ^ 3	
+>>=	x >>= 3	x = x >> 3	
+<<=	x <<= 3	x = x << 3
+
+- Comparison
+Operator	Name	Example	Try it
+==	Equal to	x == y	
+!=	Not equal	x != y	
+>	Greater than	x > y	
+<	Less than	x < y	
+>=	Greater than or equal to	x >= y	
+<=	Less than or equal to	x <= y
+
+- Logical
+Operator	Name	Description	Example	Try it
+&& 	Logical and	Returns true if both statements are true	x < 5 &&  x < 10	
+|| 	Logical or	Returns true if one of the statements is true	x < 5 || x < 4	
+!	Logical not	Reverse the result, returns false if the result is true	!(x < 5 && x < 10)
+
+@ Strings
+- to use
+// Include the string library
+#include <string>
+
+- Concatenation
+string fullName = firstName + " " + lastName;
+
+- Length
+cout << "The length of the txt string is: " <<  txt.length(); //txt.size();
+
+- Access specific char
+cout << myString[0];
+
+- Change specific char
+myString[0] = 'J';
+
+-
+The backslash (\) escape character turns special characters into string characters:
+Escape character	Result	Description
+\'	'	Single quote
+\"	"	Double quote
+\\	\	Backslash
+
+Escape Character	Result	
+\n	              New Line	
+\t	              Tab
+
+- User Input
+cin considers a space (whitespace, tabs, etc) as a terminating character, which means that it can only display a single word (even if you type many words)
+string fullName;
+cout << "Type your full name: ";
+getline (cin, fullName);
+
+@ Math
+// Include the cmath library
+#include <cmath>
+
+max(a,b)
+min(a,b)
+sqrt(a)
+round(a)
+log(a)
+
+Function	        Description
+abs(x)	          Returns the absolute value of x
+acos(x)	          Returns the arccosine of x
+asin(x)	          Returns the arcsine of x
+atan(x)	          Returns the arctangent of x
+cbrt(x)	          Returns the cube root of x
+ceil(x)	          Returns the value of x rounded up to its nearest integer
+cos(x)	          Returns the cosine of x
+cosh(x)         	Returns the hyperbolic cosine of x
+exp(x)	          Returns the value of Ex
+expm1(x)	        Returns ex -1
+fabs(x)	Returns the absolute value of a floating x
+fdim(x, y)	Returns the positive difference between x and y
+floor(x)	Returns the value of x rounded down to its nearest integer
+hypot(x, y)	Returns sqrt(x2 +y2) without intermediate overflow or underflow
+fma(x, y, z)  	Returns x*y+z without losing precision
+fmax(x, y)	Returns the highest value of a floating x and y
+fmin(x, y)	Returns the lowest value of a floating x and y
+fmod(x, y)	Returns the floating point remainder of x/y
+pow(x, y)	Returns the value of x to the power of y
+sin(x)	Returns the sine of x (x is in radians)
+sinh(x)	Returns the hyperbolic sine of a double value
+tan(x)	Returns the tangent of an angle
+tanh(x)	Returns the hyperbolic tangent of a double value
+
+
+
+- Append
+string fullName = firstName.append(lastName);
